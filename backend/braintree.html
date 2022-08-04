@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://js.braintreegateway.com/web/dropin/1.33.2/js/dropin.min.js"></script>
+</head>
+
+<body style="display:flex;flex-direction: column;">
+    <div id="dropin-container"></div>
+    <button id="submit-button" class="paymentButton">COMPLETE PAYMENT</button>
+    <script>
+        var button = document.querySelector('#submit-button');
+        braintree.dropin.create({
+            authorization: '', //the tokenization key from Braintree
+            container: '#dropin-container'
+        }, function (createErr, instance) {
+            button.addEventListener('click', function () {
+                button.textContent = "PROCESSING PAYMENT";
+                instance.requestPaymentMethod((requestPaymentMethodErr, payload) => {
+                    // Send payload to React Native to send to the server
+                    window.ReactNativeWebView.postMessage(payload.nonce);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
