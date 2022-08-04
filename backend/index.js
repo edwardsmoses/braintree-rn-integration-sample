@@ -10,6 +10,7 @@ const app = express()
 const port = 3000
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Set your secret key. Remember to switch to your live secret key in production.
 const gateway = new braintree.BraintreeGateway({
@@ -40,6 +41,7 @@ app.post('/createPaymentTransaction', async (req, res) => {
         submitForSettlement: true
       }
     });
+
 
     res.status(200).json({
       isPaymentSuccessful: result.success,
