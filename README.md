@@ -31,8 +31,17 @@
   ```
 
 6. Run the backend locally, 
-   ```
+  
+  ```
    cd backend
    npm install 
    npm start
    ```
+   
+   
+   
+### Project Setup
+ 
+The following folders contains the following things:
+- The **app** folder contains the code and setup for **Mobile App**.
+- The **backend** folder contains the code and setup for **The serverside**.
