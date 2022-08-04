@@ -45,3 +45,9 @@
 The following folders contains the following things:
 - The **app** folder contains the code and setup for **Mobile App**.
 - The **backend** folder contains the code and setup for **The serverside**.
+
+
+### Look 
+<img src="https://user-images.githubusercontent.com/19548998/182822484-49b19ae7-62fb-4e80-b827-591ff8072fbf.png" style="width: 300px" />
+
+
