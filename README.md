@@ -48,16 +48,12 @@ The following folders contains the following things:
 ### Configuration setup
 
 - Update the authorization property in the `backend/braintree.html` with the tokenization key from your Braintree account
-
-- Add the .env, and add the following properties
-  
-  ```
-
+- Add the .env, and add the following properties  
+```
 BRAINTREE_MERCHANT_ID=
 BRAINTREE_PUBLIC_KEY=
 BRAINTREE_PRIVATE_KEY=
-
-  ```
+```
 
 
 ### Look 
